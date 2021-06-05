@@ -1,1 +1,1 @@
-# dasrida-ktor
+# dasrida-ktor-practice
