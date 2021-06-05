@@ -1,15 +1,18 @@
 package com.dasrida
 
 import com.dasrida.plugins.*
-import io.ktor.server.engine.*
-import io.ktor.server.netty.*
+import io.ktor.application.*
 
-fun main() {
-    embeddedServer(Netty, port = 8080, host = "0.0.0.0") {
+fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
+
+fun Application.module(testing: Boolean = false) {
+    try {
         configureRouting()
         configureSecurity()
         configureMonitoring()
         configureTemplating()
         configureSerialization()
-    }.start(wait = true)
+    } catch (e: Exception) {
+        e.printStackTrace()
+    }
 }

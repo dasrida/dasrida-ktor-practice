@@ -4,9 +4,7 @@ import com.github.mustachejava.DefaultMustacheFactory
 import io.ktor.application.*
 import io.ktor.html.*
 import io.ktor.http.*
-import io.ktor.mustache.Mustache
-import io.ktor.mustache.MustacheContent
-import io.ktor.request.*
+import io.ktor.mustache.*
 import io.ktor.response.*
 import io.ktor.routing.*
 import kotlinx.css.*
